@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ronewa-Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <ul>
+        <li><a href="#Home">Home</a></li>
+        <li><a href="#Bio">Bio</a></li>
+        <li><a href="#Con">Contact Me</a></li>
+        <li><a href="#Exp">Experience</a></li>
+        <li><a href="#Pro">Projects</a></li>
+      </ul>
+      <button id="themeToggle">Toggle Night/Day Mode</button>
+    </header>
+
+    <section id="Home">
+      <div class="left">
+        <h1>My Name is <span id="typingText"></span></h1>
+        <p>
+          I am a passionate Software Developer skilled in web and software
+          development, with a strong foundation in programming and a love for
+          creating impactful solutions.
+        </p>
+        <a
+          href="./Ronewa Maselesele CV Software engineer Updated.docx"
+          download
+          class="download-btn"
+          >Download Resume</a
+        >
+      </div>
+
+      <img
+        src="./current_image.jpg"
+        class="personal-img"
+        alt="Ronewa Maselesele"
+      />
+    </section>
+
+    <section id="Bio">
+      <h3>Bio</h3>
+      <p>
+        I am a results-driven Software Developer with a Diploma in Software
+        Development and expertise in programming languages like Java, Python,
+        C#, PHP, and JavaScript. I have worked on dynamic web and software
+        projects using frameworks such as React, Angular, and ASP.NET Core. My
+        experience includes mentoring as a Lecturer Assistant and creating
+        user-focused applications.
+      </p>
+    </section>
+
+    <section id="Con">
+      <h3>Contact Me</h3>
+      <p>
+        Email:
+        <a href="mailto:www.rsmaselesele200@gmail.com"
+          >www.rsmaselesele200@gmail.com</a
+        >
+      </p>
+      <p>Phone: 0677345623</p>
+      <p>
+        LinkedIn:
+        <a
+          href="https://www.linkedin.com/in/ronewa-maselesele-564563232"
+          rel="noopener"
+          target="_blank"
+          >Ronewa Maselesele</a
+        >
+      </p>
+      <p>
+        GitHub:
+        <a href="https://github.com/RonewaOnly" rel="noopener" target="_blank"
+          >RonewaOnly</a
+        >
+      </p>
+    </section>
+
+    <section id="Exp">
+      <h3>Experience</h3>
+      <p>
+        <strong>Lecturer Assistant</strong> (October 2023 - October 2024)<br />
+        Assisted students with coding challenges and supported lecturers in
+        managing academic tasks. Developed problem-solving and mentoring skills.
+      </p>
+    </section>
+
+    <section id="Pro">
+      <h3>My Projects</h3>
+      <ul>
+        <li>
+          <strong>Weather App:</strong> Created a React-based weather
+          application.
+          <a
+            rel="noopener"
+            href="https://github.com/RonewaOnly/weather-app-react"
+            target="_blank"
+            >View Project</a
+          >
+        </li>
+        <li>
+          <strong>Notes App:</strong> Developed a notes-taking application using
+          C#.
+          <a
+            rel="noopener"
+            href="https://github.com/RonewaOnly/NotesApp"
+            target="_blank"
+            >View Project</a
+          >
+        </li>
+        <li>
+          <strong>JavaScript Projects:</strong> Built dynamic applications using
+          HTML, CSS, JavaScript, and APIs.
+          <a
+            rel="noopener"
+            href="https://github.com/RonewaOnly/Javascript-Projects"
+            target="_blank"
+            >View Projects</a
+          >
+        </li>
+        <li>
+          <strong>C Programming:</strong> Worked on foundational C programming
+          applications.
+          <a
+            rel="noopener"
+            href="https://github.com/RonewaOnly/C-programmingProjects"
+            target="_blank"
+            >View Projects</a
+          >
+        </li>
+      </ul>
+    </section>
+
+    <footer class="final-footer">
+      <p>&copy; 2024 Ronewa Maselesele. All rights reserved.</p>
+    </footer>
+
+    <script>
+      const text = "Ronewa Maselesele";
+      let index = 0;
+      const typingSpeed = 100; // milliseconds
+      function typeEffect() {
+        if (index < text.length) {
+          document.getElementById("typingText").innerHTML += text[index];
+          index++;
+          setTimeout(typeEffect, typingSpeed);
+        }
+      }
+      window.onload = typeEffect;
+
+      // Theme toggle logic
+      const themeToggle = document.getElementById("themeToggle");
+      const body = document.body;
+
+      themeToggle.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
+        body.classList.toggle("day-mode");
+      });
+
+      // Initialize with day mode
+      body.classList.add("day-mode");
+    </script>
+  </body>
+</html>
